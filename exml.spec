@@ -1,4 +1,5 @@
 %define _missing_doc_files_terminate_build 0
+%define version 0.1.1
 
 %define major 1
 %define libname %mklibname %{name} %major
@@ -6,7 +7,7 @@
 
 Summary: XML Library for EFL
 Name: exml
-Version: 0.1.1
+Version: %{version}
 Release: %mkrel 1
 License: BSD
 Group: System Environment/Libraries
