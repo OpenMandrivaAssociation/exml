@@ -13,7 +13,7 @@ Group: System Environment/Libraries
 URL: http://www.enlightenment.org/
 Source: ftp://ftp.enlightenment.org/pub/exml/%{name}-%{version}.tar.bz2
 BuildRequires: libxml2-devel, ecore-devel >= 0.9.9.038
-Buildrequires: libxslt-proc
+Buildrequires: libxslt-proc, %{mklibname xslt1}-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
 %description
