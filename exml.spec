@@ -1,5 +1,6 @@
 %define _missing_doc_files_terminate_build 0
 %define version 0.1.1
+%define release %mkrel 2
 
 %define major 1
 %define libname %mklibname %{name} %major
@@ -8,7 +9,7 @@
 Summary: XML Library for EFL
 Name: exml
 Version: %{version}
-Release: %mkrel 1
+Release: %{release}
 License: BSD
 Group: System Environment/Libraries
 URL: http://www.enlightenment.org/
@@ -23,8 +24,7 @@ XML library for EFL
 %package -n %libname
 Summary: Exml libraries
 Group: System Environment/Libraries
-Requires: %{name} = %{version}
-Requires: libxml2-devel, ecore-devel
+Requires: libxml2-devel, ecore >= 0.9.9.038
 
 %description -n %libname
 Exml libraries
@@ -32,8 +32,7 @@ Exml libraries
 %package -n %libnamedev
 Summary: Exml headers, static libraries, documentation and test programs
 Group: System Environment/Libraries
-Requires: %{name} = %{version}
-Requires: libxml2-devel, ecore-devel
+Requires: libxml2-devel, ecore-devel >= 0.9.9.038
 
 %description -n %libnamedev
 Headers, static libraries, test programs and documentation for EXML
