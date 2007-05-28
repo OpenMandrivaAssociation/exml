@@ -1,6 +1,6 @@
 %define _missing_doc_files_terminate_build 0
 %define version 0.1.1
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define major 1
 %define libname %mklibname %{name} %major
@@ -32,7 +32,10 @@ Exml libraries
 %package -n %libnamedev
 Summary: Exml headers, static libraries, documentation and test programs
 Group: System Environment/Libraries
-Requires: libxml2-devel, ecore-devel >= 0.9.9.038
+Requires: libxml2-devel,  ecore-devel >= 0.9.9.038
+Requires: %libname = %version
+Provides: lib%{name}-devel = %version-%release
+Provides: %{name}-devel = %version-%release
 
 %description -n %libnamedev
 Headers, static libraries, test programs and documentation for EXML
@@ -52,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %postun -n %libname -p /sbin/ldconfig
 
 %clean
-test "x$RPM_BUILD_ROOT" != "x/" && rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files -n %libname
 %defattr(-, root, root)
