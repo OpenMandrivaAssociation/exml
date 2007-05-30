@@ -2,7 +2,7 @@
 %define version 0.1.1
 %define release %mkrel 4
 
-%define major 1
+%define major 0
 %define libname %mklibname %{name} %major
 %define libnamedev %mklibname %{name} %major -d
 
@@ -25,6 +25,7 @@ XML library for EFL
 Summary: Exml libraries
 Group: System Environment/Libraries
 Requires: libxml2-devel, ecore >= 0.9.9.038
+Provides: %name = %version-%release
 
 %description -n %libname
 Exml libraries
