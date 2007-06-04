@@ -1,8 +1,8 @@
 %define _missing_doc_files_terminate_build 0
 %define version 0.1.1
-%define release %mkrel 5
+%define release %mkrel 6
 
-%define major 0
+%define major 1
 %define libname %mklibname %{name} %major
 %define libnamedev %mklibname %{name} %major -d
 
@@ -61,12 +61,13 @@ rm -rf $RPM_BUILD_ROOT
 %files -n %libname
 %defattr(-, root, root)
 %doc AUTHORS COPYING INSTALL NEWS README
-%{_libdir}/*.so*
+%{_libdir}/*.so.%{major}*
 
 %files -n %libnamedev
 %defattr(-, root, root)
 %doc doc/html
 %{_libdir}/*a
+%{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_bindir}/exml-config
 %{_includedir}/*
