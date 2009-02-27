@@ -3,7 +3,7 @@
 %define	name	exml
 %define version 0.1.1
 %define	svn 20090227
-%define release %mkrel 1.svn%{svn}.3
+%define release %mkrel 1.svn%{svn}.1
 
 %define major	0
 %define libname %mklibname %{name} %major
@@ -18,7 +18,7 @@ License:	BSD
 Group:		System/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.enlightenment.org/
-Source:		%{name}-%cvs.tar.bz2
+Source:		%{name}-%version.tar.bz2
 BuildRequires:	libxml2-devel
 BuildRequires:	ecore-devel >= 0.9.9.050
 Buildrequires:	libxslt-proc, libxslt-devel
