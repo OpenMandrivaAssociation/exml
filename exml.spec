@@ -2,8 +2,8 @@
 
 %define	name	exml
 %define version 0.1.1
-%define	cvs	20080202
-%define release %mkrel 1.cvs%{cvs}.2
+%define	svn 20090227
+%define release %mkrel 1.svn%{svn}.3
 
 %define major	0
 %define libname %mklibname %{name} %major
