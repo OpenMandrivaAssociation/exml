@@ -20,7 +20,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.enlightenment.org/
 Source:		%{name}-%cvs.tar.bz2
 BuildRequires:	libxml2-devel
-BuildRequires:	ecore-devel >= 0.9.9.042
+BuildRequires:	ecore-devel >= 0.9.9.050
 Buildrequires:	libxslt-proc, libxslt-devel
 
 %description
