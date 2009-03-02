@@ -1,6 +1,6 @@
 %define _missing_doc_files_terminate_build 0
 
-%define	name	exml
+%define	name exml
 %define version 0.1.1
 %define	svn 20090227
 %define release %mkrel 2.svn%{svn}.1
@@ -45,7 +45,7 @@ Provides: %{name}-devel = %epoch:%version-%release
 Headers, static libraries, test programs and documentation for EXML.
 
 %prep
-%setup -q -n %name
+%setup -q -n %name-%version
 
 %build
 ./autogen.sh
