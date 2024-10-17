@@ -17,7 +17,7 @@ Epoch:		1
 License:	BSD
 Group:		System/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:		http://www.enlightenment.org/
+URL:		https://www.enlightenment.org/
 Source:		%{name}-%version.tar.bz2
 BuildRequires:	libxml2-devel
 BuildRequires:	ecore-devel >= 0.9.9.050
