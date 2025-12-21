@@ -19,6 +19,11 @@ Group:		System/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		https://www.enlightenment.org/
 Source:		%{name}-%version.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libxml2-devel
 BuildRequires:	ecore-devel >= 0.9.9.050
 Buildrequires:	libxslt-proc, libxslt-devel
